@@ -16,7 +16,7 @@ async def on_ready():
 
 @tasks.loop(hours=3)
 async def hourly_notification():
-    channel_id = 1110548966904430615  # Replace with the actual channel ID where you want to send the notification
+    channel_id = YOUR_CHANNEL_ID  # Replace with the actual channel ID where you want to send the notification
     channel = bot.get_channel(channel_id)
 
     if channel:
@@ -39,5 +39,5 @@ async def hourly_notification():
                 if time_difference.total_seconds() > 7200:  # 2 hours in seconds
                     await channel.send(f"{member.mention}, you've been online for more than 2 hours! Take a break.")
 
-bot.run('MTExMDU1MTEzNjE1MjM0MjYwOA.GjJgWk.zoDsAbNvPfNpYtuClSyaTceY5_RPTZDd2cFi7A')  # Replace with your actual bot token
+bot.run('YOUR_BOT_TOKEN')  # Replace with your actual bot token
     
