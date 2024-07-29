@@ -36,7 +36,7 @@ async def hourly_notification():
                 time_difference = current_time - last_message_time
 
                 # Check if the member has been online for more than 2 hours
-                if time_difference.total_seconds() > 7200:  # 2 hours in seconds
+                if time_difference.total_seconds() > 10800:  # 3 hours in seconds
                     await channel.send(f"{member.mention}, you've been online for more than 2 hours! Take a break.")
 
 bot.run('YOUR_BOT_TOKEN')  # Replace with your actual bot token
